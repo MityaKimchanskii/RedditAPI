@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3IX-Bp-MP7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19529"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reddit Table View Controller-->
+        <scene sceneID="hvk-0N-tmI">
+            <objects>
+                <tableViewController id="3IX-Bp-MP7" customClass="RedditTableViewController" customModule="RedditAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="hTA-Bn-khP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="IdG-LH-AFZ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="580" id="z78-gl-ght" customClass="PostTableViewCell" customModule="RedditAPI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88.5" width="414" height="580"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z78-gl-ght" id="gPs-jP-ZmH">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="580"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VtZ-eh-2La">
+                                            <rect key="frame" x="62" y="13" width="290" height="287.5"/>
+                                            <color key="tintColor" systemColor="systemGrayColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="VtZ-eh-2La" secondAttribute="height" multiplier="1:1" id="MAz-jt-xcH"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wr0-kb-yAj">
+                                            <rect key="frame" x="12" y="547" width="390" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IDb-7h-XmB">
+                                            <rect key="frame" x="12" y="330" width="390" height="221"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="IDb-7h-XmB" firstAttribute="centerX" secondItem="VtZ-eh-2La" secondAttribute="centerX" id="42e-cI-YuX"/>
+                                        <constraint firstItem="IDb-7h-XmB" firstAttribute="leading" secondItem="gPs-jP-ZmH" secondAttribute="leadingMargin" constant="-8" id="CDq-H3-Wrx"/>
+                                        <constraint firstItem="wr0-kb-yAj" firstAttribute="top" secondItem="IDb-7h-XmB" secondAttribute="bottom" constant="-4" id="GWI-0v-hcm"/>
+                                        <constraint firstItem="VtZ-eh-2La" firstAttribute="width" secondItem="gPs-jP-ZmH" secondAttribute="width" multiplier="0.7" id="HIc-jz-DLZ"/>
+                                        <constraint firstItem="wr0-kb-yAj" firstAttribute="centerX" secondItem="IDb-7h-XmB" secondAttribute="centerX" id="JDP-EJ-mON"/>
+                                        <constraint firstItem="wr0-kb-yAj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gPs-jP-ZmH" secondAttribute="leading" id="P2K-ld-pBh"/>
+                                        <constraint firstItem="VtZ-eh-2La" firstAttribute="centerX" secondItem="gPs-jP-ZmH" secondAttribute="centerX" id="QBU-oD-qPI"/>
+                                        <constraint firstItem="IDb-7h-XmB" firstAttribute="top" secondItem="VtZ-eh-2La" secondAttribute="bottom" constant="28" id="QXJ-Qb-Ozt"/>
+                                        <constraint firstItem="wr0-kb-yAj" firstAttribute="height" secondItem="gPs-jP-ZmH" secondAttribute="height" multiplier="0.0362069" id="ROF-vq-kR5"/>
+                                        <constraint firstItem="IDb-7h-XmB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gPs-jP-ZmH" secondAttribute="leading" id="WtM-uG-0CJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="wr0-kb-yAj" secondAttribute="bottom" constant="12" id="dFg-cx-yeR"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wr0-kb-yAj" secondAttribute="trailing" id="glj-Zz-RDq"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IDb-7h-XmB" secondAttribute="trailing" id="ove-EH-AoJ"/>
+                                        <constraint firstItem="VtZ-eh-2La" firstAttribute="top" secondItem="gPs-jP-ZmH" secondAttribute="top" constant="12" id="w7K-lh-ox7"/>
+                                        <constraint firstItem="wr0-kb-yAj" firstAttribute="leading" secondItem="gPs-jP-ZmH" secondAttribute="leading" constant="12" id="wAe-WJ-DO6"/>
+                                        <constraint firstAttribute="trailing" secondItem="wr0-kb-yAj" secondAttribute="trailing" constant="12" id="zrA-w8-QcC"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="postIV" destination="VtZ-eh-2La" id="XOu-Zi-80D"/>
+                                    <outlet property="titleLabel" destination="IDb-7h-XmB" id="ga6-tf-Xxu"/>
+                                    <outlet property="upsLabel" destination="wr0-kb-yAj" id="AHR-2a-pf4"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3IX-Bp-MP7" id="CVb-G8-inz"/>
+                            <outlet property="delegate" destination="3IX-Bp-MP7" id="UJh-W6-Ln5"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="searchSB" destination="IdG-LH-AFZ" id="at9-61-w5e"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onk-fM-wJX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2099" y="46"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
